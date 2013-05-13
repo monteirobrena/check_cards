@@ -15,11 +15,11 @@ describe Card do
 
   cards.each do |index, card|
 
-  	it "should be card valid" do
-  	  message = card.is_valid?
-  	  expect(card.is_valid?).not_to be_empty
-  	  puts message
-  	end
+    it "should be card valid" do
+      message = card.is_valid?
+      expect(card.is_valid?).not_to be_empty
+      puts message
+    end
 
     it "should have a type" do
       expect(card.type).not_to be_empty

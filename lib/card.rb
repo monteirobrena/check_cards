@@ -8,11 +8,11 @@ class Card
   end
 
   def number
-	@number
+  @number
   end
 
   def length
-	@number.length
+  @number.length
   end
 
   class Amex
@@ -20,8 +20,8 @@ class Card
       number.match(/^(34|37)/)
     end
 
-	  def is_length_valid?(number)
-	    number.length == 15
+    def is_length_valid?(number)
+      number.length == 15
     end
 
     def name
@@ -34,9 +34,9 @@ class Card
       number.match(/^(6011)/)
     end
 
-  	def is_length_valid?(number)
+    def is_length_valid?(number)
       number.length == 16
-	  end
+    end
 
     def name
       'Discover'
