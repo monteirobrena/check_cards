@@ -1,4 +1,4 @@
-Check Cards
+# Check Cards
 
 This code checks if the credit cards are valid.
 To validate the number of credit card was used the Luhn Algorithm.
