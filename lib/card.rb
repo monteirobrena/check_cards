@@ -6,11 +6,11 @@ class Card
   def initialize number
     @number = number
   end
-  
+
   def number
 	@number
   end
-  
+
   def length
 	@number.length
   end
@@ -19,10 +19,10 @@ class Card
     def starts_with?(number)
       number.match(/^(34|37)/)
     end
-	
-	def is_length_valid?(number)
-	  number.length == 15
-	end
+
+	  def is_length_valid?(number)
+	    number.length == 15
+    end
 
     def name
       'AMEX'
@@ -33,10 +33,10 @@ class Card
     def starts_with?(number)
       number.match(/^(6011)/)
     end
-	
-	def is_length_valid?(number)
-	  number.length == 16
-	end
+
+  	def is_length_valid?(number)
+      number.length == 16
+	  end
 
     def name
       'Discover'
@@ -47,10 +47,10 @@ class Card
     def starts_with?(number)
       number.match(/^(51|55)/)
     end
-	
-	def is_length_valid?(number)
-	  number.length == 6
-	end
+
+    def is_length_valid?(number)
+      number.length == 6
+    end
 
     def name
       'MasterCard'
@@ -61,10 +61,10 @@ class Card
     def starts_with?(number)
       number.match(/^(4)/)
     end
-	
-	def is_length_valid?(number)
-	  number.length == 13 || number.length == 16
-	end
+
+    def is_length_valid?(number)
+      number.length == 13 || number.length == 16
+    end
 
     def name
       'VISA'
@@ -75,10 +75,10 @@ class Card
     def starts_with?(number)
       true
     end
-	
-	def is_length_valid?(number)
-	  true
-	end
+
+    def is_length_valid?(number)
+      true
+    end
 
     def name
       'Unknwon'
@@ -102,7 +102,7 @@ class Card
   def type
     types_for_number(@number).name
   end
-  
+
   def length_by_type
     types.find {|type| type.is_length_valid?(number)}
   end
@@ -122,7 +122,7 @@ class Card
     sum = get_sum(double_digits)
     sum % MODULUS_TEN == 0
   end
-  
+
   def is_valid?
     type << ': ' << @number << ' (' << ((length_by_type && number_is_valid?) ? 'valid' : 'invalid') << ')'
   end
